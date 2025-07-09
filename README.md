@@ -44,3 +44,9 @@ This branch explores techniques for segmenting and isolating objects—specifica
 **Object Tracking in Video Using Image Comparison and Detection**
 
 This branch presents a practical pipeline that integrates object detection and visual tracking to monitor a person across video frames. It uses MobileNet SSD to detect the initial person in the frame and OpenCV’s CSRT tracker to follow their motion throughout the video. The pipeline logs tracking events, highlights position changes, and outputs a processed video, making it suitable for surveillance demos or foundational research in video-based tracking.
+
+### `07-object-identification-cv`
+
+**Object Identification on Digital Images Using YOLOv5**
+
+This branch demonstrates real-time object identification using a custom-trained YOLOv5 model. The pipeline is optimized to detect safety violations—specifically the absence of helmets—in both webcam streams and video files. It uses a local clone of the YOLOv5 repository, processes each frame with high accuracy, and visually highlights the detections. Ideal for safety compliance, industrial monitoring, and edge-device deployment scenarios.

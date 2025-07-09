@@ -32,3 +32,9 @@ This branch investigates foundational techniques for working with raster-based d
 **Image Enhancement Techniques for Computer Vision Tasks**
 
 This branch focuses on improving the quality of digital images to optimize them for computer vision workflows. It demonstrates a complete pipeline including color correction (HSV equalization), contrast enhancement (global and local histograms), noise reduction, automatic thresholding, morphological filtering, and contour detection. Suitable for preprocessing satellite, aerial, or general-purpose images in segmentation and recognition tasks.
+
+### `05-image-segmentation-clustering`
+
+**Segmentation and Clustering Techniques for Object Detection in Imagery**
+
+This branch explores techniques for segmenting and isolating objects—specifically lakes—from satellite and map imagery. It combines K-means clustering with adaptive preprocessing pipelines for both low-resolution (Sentinel) and high-resolution (Google Maps) images. The pipeline uses color space transformations, CLAHE, contour filtering, and morphological operations to produce clean segmentation masks and visual overlays.

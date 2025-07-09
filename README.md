@@ -1,28 +1,43 @@
-### Computer Vision & Object Detection Projects
+# Image Enhancement & Contour Detection for Computer Vision
 
-A collection of practical projects focused on computer vision, real-time object detection, 2D/3D graphics transformations, and image processing using Python and deep learning frameworks.
+This project demonstrates a full pipeline for enhancing the quality of digital images and detecting significant contours, which can be useful for segmentation and feature extraction in computer vision tasks.
 
+## Overview
 
-Technologies & Tools (Python 3.10+ ,OpenCV, NumPy, Matplotlib, YOLOv5 (PyTorch), scikit-image, Ultralytics tools)
+The script processes a raster image through the following steps:
 
-## Branches
+1. **Color correction** using HSV equalization
+2. **Grayscale conversion**
+3. **Global and local histogram enhancements** (contrast stretching & CLAHE)
+4. **Noise reduction** via median filtering
+5. **Automatic thresholding** using Otsu's method
+6. **Morphological operations** (opening and closing)
+7. **Contour detection** and **area filtering**
+8. **Visualization and result saving**
 
-Each branch in this repository represents a standalone project focused on a specific topic within computer vision, object detection, or graphical rendering.
+The workflow is especially useful for improving input image quality before analysis or machine learning-based classification.
 
-### `01-basic-graphics-python`
+## Output Files
 
-**Exploring the Basic Graphical Capabilities of Python**
+All outputs are saved in the `results/` folder:
 
-This branch demonstrates how to create layered 2D shapes, render symmetrical logo-like figures using triangles, and visualize mathematical signals. The project is built entirely with native Python libraries like `matplotlib`, `numpy`, and `math`, making it ideal for understanding fundamental graphical operations without using external engines.
+- `enhanced.png` – CLAHE-enhanced grayscale image
+- `mask.png` – Thresholded and morphologically processed binary mask
+- `contours.png` – Original image with detected contours overlaid
+- `histogram.png` – Histogram of grayscale intensity values
 
-### `02-coordinate-transformations-2d-3d`
+## Technologies Used
 
-**Study of Coordinate Construction and Transformations for 2D and 3D Objects**
+- Python 3.10+
+- OpenCV (`cv2`)
+- NumPy
+- Matplotlib
+- scikit-image (`exposure`)
 
-This branch focuses on the creation and transformation of 2D and 3D geometric objects using homogeneous coordinates and transformation matrices. It includes an animated 3D triangular-based pyramid with real-time rotation, color interpolation, and opacity blending—providing insight into practical 3D graphics implementation with `matplotlib` and `numpy`.
+## Setup & Installation
 
-### `03-raster-image-processing`
-
-**Exploring Algorithms for Raster Image Formation and Processing**
-
-This branch investigates foundational techniques for working with raster-based digital images. It includes pixel-level operations, filtering, histogram-based adjustments, and basic enhancement methods using OpenCV, NumPy, and matplotlib. Ideal for learning how raw image data can be manipulated, analyzed, and visualized programmatically.
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```

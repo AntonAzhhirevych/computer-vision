@@ -20,3 +20,9 @@ This branch demonstrates how to create layered 2D shapes, render symmetrical log
 **Study of Coordinate Construction and Transformations for 2D and 3D Objects**
 
 This branch focuses on the creation and transformation of 2D and 3D geometric objects using homogeneous coordinates and transformation matrices. It includes an animated 3D triangular-based pyramid with real-time rotation, color interpolation, and opacity blending—providing insight into practical 3D graphics implementation with `matplotlib` and `numpy`.
+
+### `03-raster-image-processing`
+
+**Exploring Algorithms for Raster Image Formation and Processing**
+
+This branch investigates foundational techniques for working with raster-based digital images. It includes pixel-level operations, filtering, histogram-based adjustments, and basic enhancement methods using OpenCV, NumPy, and matplotlib. Ideal for learning how raw image data can be manipulated, analyzed, and visualized programmatically.

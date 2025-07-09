@@ -26,3 +26,9 @@ This branch focuses on the creation and transformation of 2D and 3D geometric ob
 **Exploring Algorithms for Raster Image Formation and Processing**
 
 This branch investigates foundational techniques for working with raster-based digital images. It includes pixel-level operations, filtering, histogram-based adjustments, and basic enhancement methods using OpenCV, NumPy, and matplotlib. Ideal for learning how raw image data can be manipulated, analyzed, and visualized programmatically.
+
+### `04-image-enhancement-cv`
+
+**Image Enhancement Techniques for Computer Vision Tasks**
+
+This branch focuses on improving the quality of digital images to optimize them for computer vision workflows. It demonstrates a complete pipeline including color correction (HSV equalization), contrast enhancement (global and local histograms), noise reduction, automatic thresholding, morphological filtering, and contour detection. Suitable for preprocessing satellite, aerial, or general-purpose images in segmentation and recognition tasks.

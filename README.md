@@ -1,40 +1,31 @@
-### Computer Vision & Object Detection Projects
+# Object Tracking in Video Using MobileNet SSD & CSRT
 
-A collection of practical projects focused on computer vision, real-time object detection, 2D/3D graphics transformations, and image processing using Python and deep learning frameworks.
+This project demonstrates a hybrid object detection and tracking pipeline to monitor a person across video frames. It uses MobileNet SSD for initial person detection and OpenCV's CSRT tracker for real-time tracking throughout the video stream.
 
+## Overview
 
-Technologies & Tools (Python 3.10+ ,OpenCV, NumPy, Matplotlib, YOLOv5 (PyTorch), scikit-image, Ultralytics tools)
+The pipeline performs the following steps:
 
-## Branches
+1. **Load and initialize** a pre-trained MobileNet SSD model.
+2. **Detect the first person** in the video using object detection.
+3. **Initialize tracking** with OpenCV’s CSRT algorithm.
+4. **Track the person** across video frames while skipping some frames for efficiency.
+5. **Log tracking events** (position or loss of tracking).
+6. **Save the annotated video** and log file.
 
-Each branch in this repository represents a standalone project focused on a specific topic within computer vision, object detection, or graphical rendering.
+## Technologies Used
 
-### `01-basic-graphics-python`
+- Python 3.10+
+- OpenCV (`cv2`)
+- NumPy
+- MobileNet SSD (Caffe model)
+- CSRT Tracker (OpenCV)
 
-**Exploring the Basic Graphical Capabilities of Python**
+## Setup & Installation
 
-This branch demonstrates how to create layered 2D shapes, render symmetrical logo-like figures using triangles, and visualize mathematical signals. The project is built entirely with native Python libraries like `matplotlib`, `numpy`, and `math`, making it ideal for understanding fundamental graphical operations without using external engines.
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-### `02-coordinate-transformations-2d-3d`
-
-**Study of Coordinate Construction and Transformations for 2D and 3D Objects**
-
-This branch focuses on the creation and transformation of 2D and 3D geometric objects using homogeneous coordinates and transformation matrices. It includes an animated 3D triangular-based pyramid with real-time rotation, color interpolation, and opacity blending—providing insight into practical 3D graphics implementation with `matplotlib` and `numpy`.
-
-### `03-raster-image-processing`
-
-**Exploring Algorithms for Raster Image Formation and Processing**
-
-This branch investigates foundational techniques for working with raster-based digital images. It includes pixel-level operations, filtering, histogram-based adjustments, and basic enhancement methods using OpenCV, NumPy, and matplotlib. Ideal for learning how raw image data can be manipulated, analyzed, and visualized programmatically.
-
-### `04-image-enhancement-cv`
-
-**Image Enhancement Techniques for Computer Vision Tasks**
-
-This branch focuses on improving the quality of digital images to optimize them for computer vision workflows. It demonstrates a complete pipeline including color correction (HSV equalization), contrast enhancement (global and local histograms), noise reduction, automatic thresholding, morphological filtering, and contour detection. Suitable for preprocessing satellite, aerial, or general-purpose images in segmentation and recognition tasks.
-
-### `05-image-segmentation-clustering`
-
-**Segmentation and Clustering Techniques for Object Detection in Imagery**
-
-This branch explores techniques for segmenting and isolating objects—specifically lakes—from satellite and map imagery. It combines K-means clustering with adaptive preprocessing pipelines for both low-resolution (Sentinel) and high-resolution (Google Maps) images. The pipeline uses color space transformations, CLAHE, contour filtering, and morphological operations to produce clean segmentation masks and visual overlays.

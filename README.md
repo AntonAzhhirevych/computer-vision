@@ -38,3 +38,9 @@ This branch focuses on improving the quality of digital images to optimize them 
 **Segmentation and Clustering Techniques for Object Detection in Imagery**
 
 This branch explores techniques for segmenting and isolating objects—specifically lakes—from satellite and map imagery. It combines K-means clustering with adaptive preprocessing pipelines for both low-resolution (Sentinel) and high-resolution (Google Maps) images. The pipeline uses color space transformations, CLAHE, contour filtering, and morphological operations to produce clean segmentation masks and visual overlays.
+
+### `06-object-tracking-video`
+
+**Object Tracking in Video Using Image Comparison and Detection**
+
+This branch presents a practical pipeline that integrates object detection and visual tracking to monitor a person across video frames. It uses MobileNet SSD to detect the initial person in the frame and OpenCV’s CSRT tracker to follow their motion throughout the video. The pipeline logs tracking events, highlights position changes, and outputs a processed video, making it suitable for surveillance demos or foundational research in video-based tracking.

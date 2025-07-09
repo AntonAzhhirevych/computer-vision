@@ -1,34 +1,41 @@
-### Computer Vision & Object Detection Projects
+# Image Segmentation & Clustering for Lake Detection
 
-A collection of practical projects focused on computer vision, real-time object detection, 2D/3D graphics transformations, and image processing using Python and deep learning frameworks.
+This project explores segmentation and clustering techniques to identify and isolate lakes from satellite imagery. It uses different strategies for low-resolution (Sentinel) and high-resolution (Google Maps) images to build a flexible and automated detection pipeline suitable for computer vision applications.
 
+## Overview
 
-Technologies & Tools (Python 3.10+ ,OpenCV, NumPy, Matplotlib, YOLOv5 (PyTorch), scikit-image, Ultralytics tools)
+The script performs the following steps for both image types:
 
-## Branches
+1. **Load input image** (Sentinel or Google Maps)
+2. **Color clustering** using K-means (k=3) to reduce noise and enhance class separation
+3. **Mask generation** using HSV color distance (for Sentinel) or CLAHE + thresholding (for Google Maps)
+4. **Morphological processing** (opening and closing) to clean up masks
+5. **Contour filtering** based on geometry and context
+6. **Contour visualization** over the original image
+7. **Side-by-side visualization** of all processing steps
 
-Each branch in this repository represents a standalone project focused on a specific topic within computer vision, object detection, or graphical rendering.
+## Techniques Used
 
-### `01-basic-graphics-python`
+- K-Means clustering with `sklearn`
+- HSV-based color masking
+- CLAHE (Contrast Limited Adaptive Histogram Equalization)
+- Median filtering and Otsu thresholding
+- Morphological operations (`cv2.morphologyEx`)
+- Contour filtering by position, area, and circularity
+- Visualization with `matplotlib`
 
-**Exploring the Basic Graphical Capabilities of Python**
+## Technologies Used
 
-This branch demonstrates how to create layered 2D shapes, render symmetrical logo-like figures using triangles, and visualize mathematical signals. The project is built entirely with native Python libraries like `matplotlib`, `numpy`, and `math`, making it ideal for understanding fundamental graphical operations without using external engines.
+- Python 3.10+
+- OpenCV
+- NumPy
+- Matplotlib
+- scikit-learn
 
-### `02-coordinate-transformations-2d-3d`
+## Setup & Installation
 
-**Study of Coordinate Construction and Transformations for 2D and 3D Objects**
-
-This branch focuses on the creation and transformation of 2D and 3D geometric objects using homogeneous coordinates and transformation matrices. It includes an animated 3D triangular-based pyramid with real-time rotation, color interpolation, and opacity blending—providing insight into practical 3D graphics implementation with `matplotlib` and `numpy`.
-
-### `03-raster-image-processing`
-
-**Exploring Algorithms for Raster Image Formation and Processing**
-
-This branch investigates foundational techniques for working with raster-based digital images. It includes pixel-level operations, filtering, histogram-based adjustments, and basic enhancement methods using OpenCV, NumPy, and matplotlib. Ideal for learning how raw image data can be manipulated, analyzed, and visualized programmatically.
-
-### `04-image-enhancement-cv`
-
-**Image Enhancement Techniques for Computer Vision Tasks**
-
-This branch focuses on improving the quality of digital images to optimize them for computer vision workflows. It demonstrates a complete pipeline including color correction (HSV equalization), contrast enhancement (global and local histograms), noise reduction, automatic thresholding, morphological filtering, and contour detection. Suitable for preprocessing satellite, aerial, or general-purpose images in segmentation and recognition tasks.
+```bash
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```

@@ -50,3 +50,9 @@ This branch presents a practical pipeline that integrates object detection and v
 **Object Identification on Digital Images Using YOLOv5**
 
 This branch demonstrates real-time object identification using a custom-trained YOLOv5 model. The pipeline is optimized to detect safety violations—specifically the absence of helmets—in both webcam streams and video files. It uses a local clone of the YOLOv5 repository, processes each frame with high accuracy, and visually highlights the detections. Ideal for safety compliance, industrial monitoring, and edge-device deployment scenarios.
+
+### `08-3d-reconstruction-from-images`
+
+**3D Reconstruction of Objects from Stereo Image Pairs**
+
+This branch focuses on generating 3D point clouds from stereo images using OpenCV's StereoSGBM algorithm. It computes a disparity map from a calibrated stereo pair and reprojects it into 3D space using a Q-matrix. The result is saved as a point cloud (.xyz) and a visual disparity heatmap. This workflow is applicable for depth estimation, robotics, AR, and visual mapping scenarios where depth information from images is required.

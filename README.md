@@ -62,3 +62,9 @@ This branch focuses on generating 3D point clouds from stereo images using OpenC
 **Animated 2D Transformations of a Triangle with Color Transitions**
 
 This branch illustrates a dynamic animation of a 2D triangle undergoing continuous scaling, rotation, and translation using transformation matrices. The animation also includes a cyclical fill color transition to enhance visual clarity. Built with numpy and matplotlib, this project is ideal for understanding the pipeline of geometric transformations in computer graphics and is perfect for educational visualizations or interactive presentations.
+
+### `10-image-comparison-script`
+
+**Image Comparison Using SSIM and Visual Difference Highlighting**
+
+This Contains a script for comparing two digital images using the Structural Similarity Index (SSIM). It highlights visual differences by generating a difference map, applying thresholding, and drawing bounding boxes around changed regions. The results are saved as annotated images and a combined visualization.

@@ -1,46 +1,50 @@
-### Computer Vision & Object Detection Projects
+# Helmet Detection Using YOLOv5 and OpenCV
 
-A collection of practical projects focused on computer vision, real-time object detection, 2D/3D graphics transformations, and image processing using Python and deep learning frameworks.
+This project demonstrates real-time object identification on digital images using YOLOv5. It focuses on detecting workers without helmets from a webcam or video footage. The model is optimized to identify "no helmet" violations and provide visual feedback, making it suitable for safety compliance applications in industrial or construction environments.
+
+## Overview
+
+Two modes are available:
+
+1. **Webcam mode** – real-time detection from a live camera stream
+2. **Video file mode** – offline processing of recorded footage (e.g. `.mp4`)
+
+In both cases, the script performs the following:
+- Loads a custom-trained YOLOv5 model
+- Runs detection on each frame
+- Draws bounding boxes around "no helmet" cases
+- Displays the annotated video stream in real-time
+
+## Key Features
+
+- Uses **YOLOv5** for fast and accurate object detection
+- Compatible with both **webcam** and **video file** input
+- Highlights detected "no helmet" instances in **red**
+- Fully customizable and lightweight
+
+## Technologies Used
+
+- Python 3.10+
+- OpenCV
+- PyTorch
+- YOLOv5 (local clone)
+- NumPy
 
 
-Technologies & Tools (Python 3.10+ ,OpenCV, NumPy, Matplotlib, YOLOv5 (PyTorch), scikit-image, Ultralytics tools)
 
-## Branches
+## Setup & Installation
 
-Each branch in this repository represents a standalone project focused on a specific topic within computer vision, object detection, or graphical rendering.
+```bash
+# Clone YOLOv5 repo (if not already present)
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
+pip install -r requirements.txt
 
-### `01-basic-graphics-python`
+# Go back to project root
+cd ..
 
-**Exploring the Basic Graphical Capabilities of Python**
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-This branch demonstrates how to create layered 2D shapes, render symmetrical logo-like figures using triangles, and visualize mathematical signals. The project is built entirely with native Python libraries like `matplotlib`, `numpy`, and `math`, making it ideal for understanding fundamental graphical operations without using external engines.
-
-### `02-coordinate-transformations-2d-3d`
-
-**Study of Coordinate Construction and Transformations for 2D and 3D Objects**
-
-This branch focuses on the creation and transformation of 2D and 3D geometric objects using homogeneous coordinates and transformation matrices. It includes an animated 3D triangular-based pyramid with real-time rotation, color interpolation, and opacity blending—providing insight into practical 3D graphics implementation with `matplotlib` and `numpy`.
-
-### `03-raster-image-processing`
-
-**Exploring Algorithms for Raster Image Formation and Processing**
-
-This branch investigates foundational techniques for working with raster-based digital images. It includes pixel-level operations, filtering, histogram-based adjustments, and basic enhancement methods using OpenCV, NumPy, and matplotlib. Ideal for learning how raw image data can be manipulated, analyzed, and visualized programmatically.
-
-### `04-image-enhancement-cv`
-
-**Image Enhancement Techniques for Computer Vision Tasks**
-
-This branch focuses on improving the quality of digital images to optimize them for computer vision workflows. It demonstrates a complete pipeline including color correction (HSV equalization), contrast enhancement (global and local histograms), noise reduction, automatic thresholding, morphological filtering, and contour detection. Suitable for preprocessing satellite, aerial, or general-purpose images in segmentation and recognition tasks.
-
-### `05-image-segmentation-clustering`
-
-**Segmentation and Clustering Techniques for Object Detection in Imagery**
-
-This branch explores techniques for segmenting and isolating objects—specifically lakes—from satellite and map imagery. It combines K-means clustering with adaptive preprocessing pipelines for both low-resolution (Sentinel) and high-resolution (Google Maps) images. The pipeline uses color space transformations, CLAHE, contour filtering, and morphological operations to produce clean segmentation masks and visual overlays.
-
-### `06-object-tracking-video`
-
-**Object Tracking in Video Using Image Comparison and Detection**
-
-This branch presents a practical pipeline that integrates object detection and visual tracking to monitor a person across video frames. It uses MobileNet SSD to detect the initial person in the frame and OpenCV’s CSRT tracker to follow their motion throughout the video. The pipeline logs tracking events, highlights position changes, and outputs a processed video, making it suitable for surveillance demos or foundational research in video-based tracking.

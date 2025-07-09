@@ -1,22 +1,45 @@
-### Computer Vision & Object Detection Projects
+# Animated 3D Cube with Axonometric Projection in Python
 
-A collection of practical projects focused on computer vision, real-time object detection, 2D/3D graphics transformations, and image processing using Python and deep learning frameworks.
+This project demonstrates animated rendering of a 3D cube using axonometric projection. The cube smoothly scales in size and transitions through a continuous color spectrum, creating a visually engaging effect using only 2D plotting tools.
 
+## Overview
 
-Technologies & Tools (Python 3.10+ ,OpenCV, NumPy, Matplotlib, YOLOv5 (PyTorch), scikit-image, Ultralytics tools)
+The animation features:
 
-## Branches
+- A **3D cube** rendered in 2D using **axonometric (isometric) projection**
+- **Smooth scaling** animation centered on the cube
+- **Dynamic color transitions** using HSV interpolation
+- **Wireframe edges** for geometric clarity
 
-Each branch in this repository represents a standalone project focused on a specific topic within computer vision, object detection, or graphical rendering.
+This implementation simulates 3D behavior within a 2D environment using transformation matrices and homogeneous coordinates — perfect for exploring foundational concepts in 3D graphics.
 
-### `01-basic-graphics-python`
+## Key Concepts
 
-**Exploring the Basic Graphical Capabilities of Python**
+- 3D object definition via vertex and face lists
+- Homogeneous transformations and matrix multiplication
+- Axonometric projection using rotation matrices (`Rx`, `Ry`)
+- Uniform scaling with respect to object center
+- Real-time animation with `FuncAnimation`
+- HSV-to-RGB color cycling for smooth transitions
 
-This branch demonstrates how to create layered 2D shapes, render symmetrical logo-like figures using triangles, and visualize mathematical signals. The project is built entirely with native Python libraries like `matplotlib`, `numpy`, and `math`, making it ideal for understanding fundamental graphical operations without using external engines.
+## Technologies Used
 
-### `02-coordinate-transformations-2d-3d`
+- Python 3.10+
+- `matplotlib`
+- `numpy`
 
-**Study of Coordinate Construction and Transformations for 2D and 3D Objects**
+## Setup & Installation
 
-This branch focuses on the creation and transformation of 2D and 3D geometric objects using homogeneous coordinates and transformation matrices. It includes an animated 3D triangular-based pyramid with real-time rotation, color interpolation, and opacity blending—providing insight into practical 3D graphics implementation with `matplotlib` and `numpy`.
+To run this animation:
+
+```bash
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Running the Script
+
+```bash
+python3 main.py
+```

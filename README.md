@@ -56,3 +56,9 @@ This branch demonstrates real-time object identification using a custom-trained 
 **3D Reconstruction of Objects from Stereo Image Pairs**
 
 This branch focuses on generating 3D point clouds from stereo images using OpenCV's StereoSGBM algorithm. It computes a disparity map from a calibrated stereo pair and reprojects it into 3D space using a Q-matrix. The result is saved as a point cloud (.xyz) and a visual disparity heatmap. This workflow is applicable for depth estimation, robotics, AR, and visual mapping scenarios where depth information from images is required.
+
+### `09-2d-triangle-transform-animation`
+
+**Animated 2D Transformations of a Triangle with Color Transitions**
+
+This branch illustrates a dynamic animation of a 2D triangle undergoing continuous scaling, rotation, and translation using transformation matrices. The animation also includes a cyclical fill color transition to enhance visual clarity. Built with numpy and matplotlib, this project is ideal for understanding the pipeline of geometric transformations in computer graphics and is perfect for educational visualizations or interactive presentations.
